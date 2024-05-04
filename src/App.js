@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import SideBarMenu from './components/SideBarMenu';
+import Admin from './context/Admin';
+import SideBar from './context/SideBar';
+import Test from './context/Test';
+import 'react-notifications/lib/notifications.css';
+import Side from './components/side';
+import { NotificationContainer } from 'react-notifications'
+import Professeur from './context/Professeur';
+import Home from './components/Home';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <SideBar>
+      <Admin>
+      <Test>
+        <Professeur>
+
+        
+      <NotificationContainer></NotificationContainer>
+      <Home/>
+      </Professeur>
+      </Test>
+      </Admin>
+    </SideBar>
+    </>
+      
+    
   );
 }
 
